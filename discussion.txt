@@ -1,0 +1,74 @@
+Runtime
+-------
+
+1. Runtime for does_string_contain_letter:
+O(1)
+
+
+2. Runtime for duplicate_letters:
+O(log n)
+
+
+3. Runtime for duplicate_letters2:
+O(n)
+
+
+Stacks and Queues
+-----------------
+
+
+1. Which would be a better data structure for creating a Stack: a Linked List or 
+   a built-in Python list? Explain why, referencing the runtime requirements for
+   Stack operations (push, pop, etc).
+Since stacks are last-in first-out, the last item of the list is going to always be the focus.
+A built-in Python list would be ideal because adding to and removing from the end of the list will always 
+   be in constant time. 
+
+
+
+
+
+2. Which would be a better data structure for creating a Queue: a Linked List or
+   a built-in Python list? Explain why, referencing the runtime requirements for
+   Queue methods (enqueue, dequeue, etc).
+
+A doubly linked list is ideal for queues, because both the enque and the dequeue would be in O(1) runtime. 
+Otherwise the action of removing an item from the front of a python built-in list would be O(n) runtime.
+
+
+Trees
+-----
+
+1. Using the diagram in the instructions, in what order would a Breadth First
+   Search (BFS) algorithm visit each node  until finding burritos (starting at
+   food)?
+Start: 
+>>> (food) 
+>>> (Italian, Indian, Mexican)
+>>> (Indian, Mexican, lasagna, pizza)
+>>> (Mexican, lasagna, pizza, tikka masala, saag)
+>>> (lasagna, pizza, tikka masala, saag, burritos, tacos, enchiladas)
+>>> (pizza, tikka masala, saag, burritos, tacos, enchiladas)
+>>> (tikka masala, saag, burritos, tacos, enchiladas, thin crust, Chicago-style, New York-style, Sicilian)
+>>> (saag, burritos, tacos, enchiladas, thin crust, Chicago-style, New York-style, Sicilian)
+>>> BURRITOS FOUND!!
+
+2. Using the diagram in the instructions, In what order would a Depth First 
+   Search (DFS) algorithm visit each node until finding Chicago-style (starting
+   at food)? 
+
+>>> (food) 
+>>> (Italian, Indian, Mexican)
+>>> (Italian, Indian, burritos, tacos, enchiladas)
+>>> (Italian, Indian, burritos, tacos)
+>>> (Italian, Indian, burritos)
+>>> BURRITOS FOUND!
+
+
+3. How is a binary search tree different from other trees?
+
+Binary search trees have rules for arranging their nodes.
+Every tree has a left and right child, and is sorted.
+This allows for easy searching by eliminating one half early on.
+
+
