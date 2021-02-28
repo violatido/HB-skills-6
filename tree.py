@@ -48,8 +48,27 @@ class Tree(object):
         """
 
         # TODO: Complete this function
+        # create empty list []
+        # create a new list containing the top node of the tree
+        # create a while loop
+            # if the current node in the list is the value we want:
+                # append node to new list
+                # pop the node to get more nodes in
+        # use pop(0) to always remove the first item of the node list 
+            # This means the lower-hierarchy data will be added to the end of the list.
+        #return new list
+        new_lst = []
+        node_lst = [self]
 
-        pass
+        while node_lst:
+            current = node_lst.pop(0)
+
+            if current == data:
+                new_lst.append(current)
+
+            node_lst.extend(current.children)
+
+        return new_lst
 
 
 if __name__ == "__main__":

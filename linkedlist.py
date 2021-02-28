@@ -50,27 +50,23 @@ def only_vowels(llist):
     """
 
     #pseudo code: 
-    # create an empty llist 
-    # create a list of vowels
-    # create current = self.head
-    # traverse the list with a loop:
-    # while current is not None 
-    #   if current[0] is in list of vowels -> 
-            # append to empty llist
-        # current = current.next
-    # return new llist
+        # create an empty llist 
+        # create a list of vowels
+        # create current = self.head
+        # traverse the list with a loop:
+        # while current is not None 
+        #   if current[0] is in list of vowels -> 
+                # append to empty llist
+            # current = current.next
+        # return new llist
     new_llist = LinkedList()
     vowels = ['a', 'e', 'i', 'o', 'u']
 
     current = llist.head 
-    # new_node = Node(data)
 
     while current.next is not None:
         if current[0] in vowels:
-            if new_llist is None:
-                new_llist.head = Node(current)
-            elif new_llist.tail is not None:
-                new_llist.tail.next = Node(current)
+            new_llist.add_node(current)
 
         current = current.next     
 
